@@ -30,9 +30,9 @@
                             <label for="surname" class="col-md-4 col-form-label text-md-end">{{ __('Surname') }}</label>
 
                             <div class="col-md-6">
-                                <input id="surname" type="text" class="form-control @error('name') is-invalid @enderror"
-                                    name="surname" value="{{ old('surname') }}" required autocomplete="surname"
-                                    autofocus>
+                                <input id="surname" type="text"
+                                    class="form-control @error('surname') is-invalid @enderror" name="surname"
+                                    value="{{ old('surname') }}" required autocomplete="surname" autofocus>
 
                                 @error('surname')
                                 <span class="invalid-feedback" role="alert">
@@ -48,7 +48,7 @@
 
                             <div class="col-md-6">
                                 <input id="patronymic" type="text"
-                                    class="form-control @error('name') is-invalid @enderror" name="patronymic"
+                                    class="form-control @error('patronymic') is-invalid @enderror" name="patronymic"
                                     value="{{ old('Patronymic') }}" autocomplete="Patronymic" autofocus>
 
                                 @error('patronymic')
@@ -64,7 +64,7 @@
                                 }}</label>
 
                             <div class="col-md-6">
-                                <input id="login" type="text" class="form-control @error('name') is-invalid @enderror"
+                                <input id="login" type="text" class="form-control @error('login') is-invalid @enderror"
                                     name="login" value="{{ old('login') }}" required autocomplete="login" autofocus>
 
                                 @error('login')
@@ -121,7 +121,8 @@
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                        required>
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Согласие с правилами регистрации
                                     </label>
