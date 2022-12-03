@@ -23,3 +23,15 @@
 .card-catalog-body {
     min-height: 150px;
 }
+
+.card-full {
+    max-width: 400px;
+}
+
+.header--logo {
+    max-width: 140px;
+}
+
+.card-body-about {
+    min-height: 460px;
+}

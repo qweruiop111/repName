@@ -29,79 +29,20 @@
     </div>
 
     <div class="row">
-        <div class="col">
-            <div class="card mt-5">
-                <img src="img/1.jpg" class="card-img-top card-img-catalog" alt="1">
-                <div class="card-body card-catalog-body">
-                    <h5 class="card-title">Заголовок карточки</h5>
-                    <p class="card-text"><small class="text-muted">12.03.2014</small></p>
-                    <a href="#" class="btn btn-primary">Цена</a>
-                </div>
+        @foreach ($arr as $elem)
+        <div class="col-md-3">
+        <div class="card card-full mt-5">
+            <img src=" {{$elem->imgsource}} " class="card-img-top card-img-catalog" alt="{{$elem->id}}">
+            <div class="card-body card-catalog-body">
+                <h5 class="card-title">{{$elem->antagonist}}</h5>
+                <p class="card-text"><small class="text-muted">{{$elem->datadrop}}</small></p>
+                <a href="comic/{{$elem->id}}" class="btn btn-primary">{{$elem->price}} ₽</a>
             </div>
         </div>
-
-        <div class="col">
-            <div class="card mt-5">
-                <img src="..." class="card-img-top card-img-catalog" alt="1">
-                <div class="card-body card-catalog-body">
-                    <h5 class="card-title">Заголовок карточки</h5>
-                    <p class="card-text"><small class="text-muted">12.03.2014</small></p>
-                    <a href="#" class="btn btn-primary">Цена</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card mt-5">
-                <img src="..." class="card-img-top card-img-catalog" alt="1">
-                <div class="card-body card-catalog-body">
-                    <h5 class="card-title">Заголовок карточки</h5>
-                    <p class="card-text"><small class="text-muted">12.03.2014</small></p>
-                    <a href="#" class="btn btn-primary">Цена</a>
-                </div>
-            </div>
-        </div>
-
     </div>
+    @endforeach
+</div>
 
-    <div class="row">
-
-        <div class="col">
-            <div class="card mt-5">
-                <img src="..." class="card-img-top card-img-catalog" alt="1">
-                <div class="card-body card-catalog-body">
-                    <h5 class="card-title">Заголовок карточки</h5>
-                    <p class="card-text"><small class="text-muted">12.03.2014</small></p>
-                    <a href="#" class="btn btn-primary">Цена</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card mt-5">
-                <img src="..." class="card-img-top card-img-catalog" alt="1">
-                <div class="card-body card-catalog-body">
-                    <h5 class="card-title">Заголовок карточки</h5>
-                    <p class="card-text"><small class="text-muted">12.03.2014</small></p>
-                    <a href="#" class="btn btn-primary">Цена</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card mt-5">
-                <img src="..." class="card-img-top card-img-catalog" alt="1">
-                <div class="card-body card-catalog-body">
-                    <h5 class="card-title">Заголовок карточки</h5>
-                    <p class="card-text"><small class="text-muted">12.03.2014</small></p>
-                    <a href="#" class="btn btn-primary">Цена</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-
+</div>
 </div>
 @endsection

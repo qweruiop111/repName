@@ -27,7 +27,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Funny Comics Land
+                    <img src="img/logo.svg" class="header--logo" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -39,13 +39,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="about">О нас</a>
+                            <a class="nav-link" aria-current="page" href="/public/about">О нас</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="catalog">Каталог</a>
+                            <a class="nav-link" href="/public/catalog">Каталог</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="find">Где нас найти?</a>
+                            <a class="nav-link" href="/public/find">Где нас найти?</a>
                         </li>
                     </ul>
 

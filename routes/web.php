@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CatalogController;
 use Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -34,3 +35,8 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/catalog', [HomeController::class, 'catalog']);
 Route::get('/find', [HomeController::class, 'find']);
+Route::get('/comic/{id}', [HomeController::class, 'comic']);
+
+Route::get('/login', [HomeController::class, 'auth']);
+Route::get('/register', [HomeController::class, 'auth']);
+Route::get('/logout', [HomeController::class, 'auth']);

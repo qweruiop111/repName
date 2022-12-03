@@ -5,7 +5,7 @@
     <p> about </p>
     <div class="row">
         <div class="col">
-            <img src="img/logo.png">
+            <img src="img/logo.svg">
         </div>
         <div class="col">
             <p> девиз компании</p>
