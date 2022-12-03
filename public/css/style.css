@@ -1,0 +1,25 @@
+.carousel-control-prev {
+    margin-left: -45px;
+    padding: 0;
+    width: 50px;
+}
+
+.carousel-control-next {
+    margin-right: -45px;
+    padding: 0;
+    width: 50px;
+}
+
+.carousel {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+.card-img-catalog {
+    max-height: 350px;
+}
+
+.card-catalog-body {
+    min-height: 150px;
+}

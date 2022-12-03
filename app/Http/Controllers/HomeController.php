@@ -11,6 +11,21 @@ class HomeController extends Controller
         return view('index');
     }
 
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function catalog()
+    {
+        return view('catalog');
+    }
+
+    public function find()
+    {
+        return view('find');
+    }
+
 
 
     /**
