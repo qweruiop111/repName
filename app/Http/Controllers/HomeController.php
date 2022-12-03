@@ -7,14 +7,15 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
+    /* adminka 
+    public function __construct()
+    {
+    $this->middleware('auth');
+    }
+    */
     public function index()
     {
         return view('index');
-    }
-
-    public function about()
-    {
-        return view('about');
     }
 
     public function find()
@@ -44,15 +45,22 @@ class HomeController extends Controller
         return view('comic', ['arr' => $date]);
     }
 
+    public function last5()
+    {
+        $date = DB::table('catalogs')
+            ->orderBy('created_at', 'desc')
+            ->limit(5)
+            ->get();
+        return view('about', ['arr' => $date]);
+    }
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+
+
 
     /**
      * Show the application dashboard.

@@ -32,11 +32,7 @@ Route::get('/home', [HomeController::class, 'home'])->name('home');
 
 Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/about', [HomeController::class, 'about']);
+Route::get('/about', [HomeController::class, 'last5']);
 Route::get('/catalog', [HomeController::class, 'catalog']);
 Route::get('/find', [HomeController::class, 'find']);
 Route::get('/comic/{id}', [HomeController::class, 'comic']);
-
-Route::get('/login', [HomeController::class, 'auth']);
-Route::get('/register', [HomeController::class, 'auth']);
-Route::get('/logout', [HomeController::class, 'auth']);
