@@ -27,7 +27,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="img/logo.svg" class="header--logo" alt="logo">
+                    <img src="/public/img/logo.svg" class="header--logo" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -39,7 +39,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/public/about">О нас</a>
+                            <a class="nav-link" aria-current="page" href="/public/">О нас</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/public/catalog">Каталог</a>
@@ -91,7 +91,16 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <div class="footer">
+            <ul class="text-center">
+                <p style="padding-top: 30px">магазин комиксов funny comics land</p>
+                <p>ооо все права защищены</p>
+                <p>+79081002231</p>
+            </ul>
+        </div>
     </div>
 </body>
+
 
 </html>

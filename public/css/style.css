@@ -39,3 +39,32 @@
 .novinki {
     text-align: center;
 }
+
+.map--about {
+    max-width: 700px;
+}
+
+.contacts-list {
+    font-size: 30px;
+}
+
+.footer {
+    background-color: #555;
+    color: white;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    min-height: 150px;
+    position: relative;
+    flex: auto;
+    margin: 0;
+    padding: 0;
+    margin-top: 200px;
+}
+
+.last-5-name {
+    color: white;
+    font-size: 34px;
+    font-weight: 500;
+    text-shadow: 6px 0 6px #000;
+}

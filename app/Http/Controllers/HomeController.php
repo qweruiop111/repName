@@ -48,7 +48,7 @@ class HomeController extends Controller
     public function last5()
     {
         $date = DB::table('catalogs')
-            ->orderBy('created_at', 'desc')
+            ->orderBy('datadrop', 'desc')
             ->limit(5)
             ->get();
         return view('about', ['arr' => $date]);

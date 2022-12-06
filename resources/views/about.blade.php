@@ -2,7 +2,6 @@
 
 @section('content')
 <div class="container">
-    <p> about </p>
     <div class="row">
         <div class="col">
             <img src="img/logo.svg">
@@ -12,24 +11,45 @@
         </div>
     </div>
 
+
     <section class="lastfive">
-        <h2 class="text-center"> loop!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h2>
-        <div class="row">
-            @foreach ($arr as $elem)
-            <div class="col-md-3">
-                <div class="card card-full mt-5">
-                    <img src=" {{$elem->imgsource}} " class="card-img-top card-img-catalog" alt="{{$elem->id}}">
-                    <div class="card-body card-catalog-body">
-                        <h5 class="card-title">{{$elem->antagonist}}</h5>
-                        <p>{{$elem->publisher}}</p>
-                        <p class="card-text"><small class="text-muted">{{$elem->datadrop}}</small></p>
-                        <a href="comic/{{$elem->id}}" class="btn btn-primary">{{$elem->price}} ₽</a>
+        <h2 class="text-center mt-5 mb-5">Последние 5 новинок</h2>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @foreach ($arr as $elem)
+                @if ($loop->first)
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="{{$elem->imgsource}}" class="card-img-top card-img-catalog" alt="{{$elem->id}}">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="last-5-name">{{$elem->antagonist}}</h5>
                     </div>
                 </div>
+                @else
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="{{$elem->imgsource}}" class="card-img-top card-img-catalog" alt="{{$elem->id}}">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="last-5-name">{{$elem->antagonist}}</h5>
+                    </div>
+                </div>
+                @endif
+                @endforeach
             </div>
-            @endforeach
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
         </div>
     </section>
+
+
+
+
 
 
 </div>
