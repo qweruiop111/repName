@@ -7,6 +7,72 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
+    // дефолтный каталог
+    public function catalog()
+    {
+        $date = DB::table('catalogs')
+            ->orderBy('datadrop', 'desc')
+            ->get();
+        return view('catalog', ['arr' => $date]);
+    }
+
+    // по году производства
+    public function catalogYearOrder()
+    {
+        $date = DB::table('catalogs')
+            ->orderby('datadrop', 'asc')
+            ->get();
+        return view('catalog', ['arr' => $date]);
+    }
+
+    // по наименованию
+    public function catalogName()
+    {
+        $date = DB::table('catalogs')
+            ->orderby('antagonist', 'asc')
+            ->get();
+        return view('catalog', ['arr' => $date]);
+    }
+
+    // по цене
+    public function catalogPrice()
+    {
+        $date = DB::table('catalogs')
+            ->orderby('price', 'asc')
+            ->get();
+        return view('catalog', ['arr' => $date]);
+    }
+
+    //фильтры
+    public function Marvel()
+    {
+        $date = DB::table('catalogs')
+            ->where('publisher', '=', 'marvel')
+            ->get();
+        return view('catalog', ['arr' => $date]);
+    }
+
+    public function DC()
+    {
+        $date = DB::table('catalogs')
+            ->where('publisher', '=', 'dc')
+            ->get();
+        return view('catalog', ['arr' => $date]);
+    }
+
+    public function other()
+    {
+        $date = DB::table('catalogs')
+            ->where('publisher', '=', 'other')
+            ->get();
+        return view('catalog', ['arr' => $date]);
+    }
+
+
+
+
+
+
     /* adminka 
     public function __construct()
     {
@@ -31,12 +97,6 @@ class HomeController extends Controller
     public function auth()
     {
         return view('layouts.app');
-    }
-
-    public function catalog()
-    {
-        $date = DB::table('catalogs')->get();
-        return view('catalog', ['arr' => $date]);
     }
 
     public function comic($id)

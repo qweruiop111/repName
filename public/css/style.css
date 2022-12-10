@@ -68,3 +68,16 @@
     font-weight: 500;
     text-shadow: 6px 0 6px #000;
 }
+
+.header-menu-link {
+    font-size: 24px;
+    color: black;
+}
+
+.catalog-filtr {
+    font-size: 24px;
+}
+
+.catalog-sort {
+    font-size: 24px;
+}

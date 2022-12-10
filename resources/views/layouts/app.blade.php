@@ -39,13 +39,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/public/">О нас</a>
+                            <a class="nav-link header-menu-link" aria-current="page" href="/public/">О нас</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/public/catalog">Каталог</a>
+                            <a class="nav-link header-menu-link" href="/public/catalog">Каталог</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/public/find">Где нас найти?</a>
+                            <a class="nav-link header-menu-link" href="/public/find">Где нас найти?</a>
                         </li>
                     </ul>
 
@@ -55,13 +55,13 @@
                         @guest
                         @if (Route::has('login'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="nav-link header-menu-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                         @endif
 
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link header-menu-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
                         @endif
                         @else

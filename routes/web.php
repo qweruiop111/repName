@@ -26,11 +26,27 @@ Route::get('auth/logout', [AuthController::class, 'getLogout']);
 
 Route::get('auth/register', [AuthController::class,'getRegister']);
 Route::post('auth/register', [AuthController::class, 'postRegister']);
-
 */
+
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 
 Route::get('/', [HomeController::class, 'last5']);
+
 Route::get('/catalog', [HomeController::class, 'catalog']);
+
+Route::get('/catalog/yearorder', [HomeController::class, 'catalogYearOrder']);
+
+Route::get('/catalog/name', [HomeController::class, 'catalogName']);
+
+Route::get('/catalog/price', [HomeController::class, 'catalogPrice']);
+
+Route::get('/catalog/marvel', [HomeController::class, 'Marvel']);
+
+Route::get('/catalog/dc', [HomeController::class, 'DC']);
+
+Route::get('/catalog/other', [HomeController::class, 'other']);
+
 Route::get('/find', [HomeController::class, 'find']);
+
 Route::get('/comic/{id}', [HomeController::class, 'comic']);
+
