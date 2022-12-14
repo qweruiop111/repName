@@ -18,4 +18,13 @@ class catalog extends Model
         'antagonist',
         'category',
     ];
+    public function categ()
+    {
+        return $this->belongsTo(category::class, 'category');
+    }
+
+    public function publish()
+    {
+        return $this->belongsTo(publisher::class, 'publisher');
+    }
 }
