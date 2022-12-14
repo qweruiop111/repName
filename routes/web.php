@@ -50,3 +50,11 @@ Route::get('/find', [HomeController::class, 'find']);
 
 Route::get('/comic/{id}', [HomeController::class, 'comic']);
 
+
+
+
+
+
+Route::get('/add', [CatalogController::class, 'add']);
+
+Route::get('/admin', [CatalogController::class, 'admin']);
