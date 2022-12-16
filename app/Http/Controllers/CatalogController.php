@@ -73,4 +73,13 @@ class CatalogController extends Controller
 
         return redirect('/admin');
     }
+
+    public function adminDeleteTovar($id)
+    {
+        $asd = catalog::find($id);
+
+        $asd->delete();
+
+        return redirect('/admin');
+    }
 }

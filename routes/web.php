@@ -52,6 +52,8 @@ Route::get('/admin/update/{id}', [CatalogController::class, 'adminUpdate']);
 
 Route::post('/admin/update', [CatalogController::class, 'adminUpdatePost']);
 
+Route::get('/admin/delete/{id}', [CatalogController::class, 'adminDeleteTovar']);
+
 
 
 Route::get('/admin', [CatalogController::class, 'admin']);

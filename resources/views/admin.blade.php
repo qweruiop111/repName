@@ -59,7 +59,7 @@
                 <a href="/public/admin/update/{{$catalog->id}}">Изменить</a>
             </td>
             <td>
-                <a href="">Удалить</a>
+                <a href="/public/admin/delete/{{$catalog->id}}">Удалить</a>
             </td>
         </tr>
         @endforeach
