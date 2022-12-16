@@ -14,7 +14,11 @@ class CatalogController extends Controller
     {
         $categ = category::all();
         $publish = publisher::all();
-        return view('admin', ['categ' => $categ, 'publish' => $publish]);
+        return view('admin', [
+            'categ' => $categ,
+            'publish' => $publish,
+            'catalogs' => \App\Models\catalog::all()
+        ]);
     }
 
     public function add(Request $request)
@@ -38,6 +42,34 @@ class CatalogController extends Controller
         \App\Models\category::create([
             "name" => $request->input('name'),
         ]);
+
+        return redirect('/admin');
+    }
+
+    public function adminUpdate($id)
+    {
+        $date = catalog::find($id);
+        $categ = category::all();
+        $publish = publisher::all();
+        return view('adminUpdate', [
+            'catalog' => $date,
+            'categ' => $categ,
+            'publish' => $publish
+        ]);
+    }
+
+    public function adminUpdatePost(Request $request)
+    {
+        $qwe = catalog::find($request->id);
+        $qwe->name = $request->input("name");
+        $qwe->imgsource = $request->input("imgsource");
+        $qwe->price = $request->input("price");
+        $qwe->publisher = $request->input("publisher");
+        $qwe->stock = $request->input("stock");
+        $qwe->datadrop = $request->input("datadrop");
+        $qwe->antagonist = $request->input("antagonist");
+        $qwe->category = $request->input("categories");
+        $qwe->save();
 
         return redirect('/admin');
     }

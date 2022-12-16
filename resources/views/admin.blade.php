@@ -1,10 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin</title>
 </head>
 
@@ -35,10 +31,39 @@
         <p><input type="submit"></p>
     </form>
 
-    <br><br><br><br><br><br><br>
+    <br><br><br><br><br>
 
     <p>Редактировать товар</p>
-    
+
+    <table border="1">
+        <th>Название</th>
+        <th>Источник</th>
+        <th>Цена</th>
+        <th>Издатель</th>
+        <th>В наличии</th>
+        <th>Дата выхода</th>
+        <th>Антагонист</th>
+        <th>Категория</th>
+
+        @foreach ($catalogs as $catalog)
+        <tr>
+            <td>{{$catalog->name}}</td>
+            <td>{{$catalog->imgsource}}</td>
+            <td>{{$catalog->price}}</td>
+            <td>{{$catalog->publish->name}}</td>
+            <td>{{$catalog->stock}}</td>
+            <td>{{$catalog->datadrop}}</td>
+            <td>{{$catalog->antagonist}}</td>
+            <td>{{$catalog->categ->name}}</td>
+            <td>
+                <a href="/public/admin/update/{{$catalog->id}}">Изменить</a>
+            </td>
+            <td>
+                <a href="">Удалить</a>
+            </td>
+        </tr>
+        @endforeach
+    </table>
 
 
 

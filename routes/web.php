@@ -48,6 +48,10 @@ Route::get('/admin/add', [CatalogController::class, 'add']);
 
 Route::get('/admin/add/category', [CatalogController::class, 'addCategory']);
 
-Route::get('/admin/update', [CatalogController::class, 'tovarUpdate']);
+Route::get('/admin/update/{id}', [CatalogController::class, 'adminUpdate']);
+
+Route::post('/admin/update', [CatalogController::class, 'adminUpdatePost']);
+
+
 
 Route::get('/admin', [CatalogController::class, 'admin']);
