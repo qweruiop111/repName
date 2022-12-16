@@ -44,9 +44,10 @@ Route::get('/comic/{id}', [HomeController::class, 'comic']);
 
 
 
-
-
-
 Route::get('/admin/add', [CatalogController::class, 'add']);
+
+Route::get('/admin/add/category', [CatalogController::class, 'addCategory']);
+
+Route::get('/admin/update', [CatalogController::class, 'tovarUpdate']);
 
 Route::get('/admin', [CatalogController::class, 'admin']);

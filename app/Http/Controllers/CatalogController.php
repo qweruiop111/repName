@@ -32,4 +32,13 @@ class CatalogController extends Controller
 
         return redirect('/admin');
     }
+
+    public function addCategory(Request $request)
+    {
+        \App\Models\category::create([
+            "name" => $request->input('name'),
+        ]);
+
+        return redirect('/admin');
+    }
 }

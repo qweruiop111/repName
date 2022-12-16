@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
@@ -41,9 +42,9 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-      if(\Auth::attempt(['login' => $request->input('login'), 'password' => $request->input('password')])){
+        if (\Auth::attempt(['login' => $request->input('login'), 'password' => $request->input('password')])) {
             return redirect('/');
-      }
+        }
         return redirect('/login');
     }
 }

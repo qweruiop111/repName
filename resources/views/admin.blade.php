@@ -10,8 +10,8 @@
 
 <body>
 
-    <p>Добавить комиксы</p>
-    <form action="/public/add">
+    <p>Добавить товар</p>
+    <form action="/public/admin/add">
         <p><input type="text" name="name"> Название</p>
         <p><input type="text" name="imgsource"> путь к картинке</p>
         <p><input type="number" name="price"> цена</p>
@@ -34,6 +34,15 @@
         </p>
         <p><input type="submit"></p>
     </form>
+
+    <br><br><br><br><br><br><br>
+
+    <p>Редактировать товар</p>
+    
+
+
+
+
 
 </body>
 

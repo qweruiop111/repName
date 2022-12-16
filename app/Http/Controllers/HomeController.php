@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\catalog;
 use App\Models\category;
+use App\Models\publisher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -13,26 +14,30 @@ class HomeController extends Controller
     public function catalog()
     {
         $categor = category::all();
-        $date = DB::table('catalogs')
-            ->orderBy('datadrop', 'desc')
+        $publish = publisher::all();
+        $date = \App\Models\catalog::orderBy('datadrop', 'desc')
             ->get();
-        return view('catalog', ['arr' => $date, "categories"=>$categor]);
+        return view('catalog', [
+            'arr' => $date,
+            "categories" => $categor,
+            'publish' => $publish
+        ]);
     }
 
 
     public function catalogPrice($name, $nap)
     {
         $categor = category::all();
-        $date =catalog::orderBy($name, $nap)->get();
-        return view('catalog', ['arr' => $date,"categories"=>$categor]);
+        $date = catalog::orderBy($name, $nap)->get();
+        return view('catalog', ['arr' => $date, "categories" => $categor]);
     }
 
     //фильтры
     public function filters($idCat)
     {
         $categor = category::all();
-        $date =catalog::where("category",$idCat)->get();
-        return view('catalog', ['arr' => $date,"categories"=>$categor]);
+        $date = catalog::where("category", $idCat)->get();
+        return view('catalog', ['arr' => $date, "categories" => $categor]);
     }
 
     /* adminka 

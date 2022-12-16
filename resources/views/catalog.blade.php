@@ -39,8 +39,6 @@
                     <a href="/public/catalog/{{$obCat->id}}">{{$obCat->name}}</a>
                 </div>
                 @endforeach
-
-
             </div>
         </div>
     </div>
@@ -52,7 +50,7 @@
             <div class="card card-full mt-5">
                 <img src="/public/{{$elem->imgsource}} " class="card-img-top card-img-catalog" alt="{{$elem->id}}">
                 <div class="card-body card-catalog-body">
-                    <h5 class="card-title">{{$elem->categ->name}}</h5>
+                    <h5 class="card-title">{{$elem->name}}</h5>
                     <p>{{$elem->publish->name}}</p>
                     <p class="card-text"><small class="text-muted">{{$elem->datadrop}}</small></p>
                     <a href="comic/{{$elem->id}}" class="btn btn-primary">{{$elem->price}} ₽</a>

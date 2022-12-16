@@ -49,7 +49,8 @@
                             <div class="col-md-6">
                                 <input id="patronymic" type="text"
                                     class="form-control @error('patronymic') is-invalid @enderror" name="patronymic"
-                                    value="{{ old('Patronymic') }}" autocomplete="Patronymic" autofocus>
+                                    value="{{ old('Patronymic') }}" pattern="^[- а-яА-Я]+$" autocomplete="Patronymic"
+                                    autofocus>
 
                                 @error('patronymic')
                                 <span class="invalid-feedback" role="alert">

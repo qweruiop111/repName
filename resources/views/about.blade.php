@@ -21,14 +21,14 @@
                 <div class="carousel-item active" data-bs-interval="10000">
                     <img src="{{$elem->imgsource}}" class="card-img-top card-img-catalog" alt="{{$elem->id}}">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 class="last-5-name">{{$elem->antagonist}}</h5>
+                        <h5 class="last-5-name">{{$elem->name}}</h5>
                     </div>
                 </div>
                 @else
                 <div class="carousel-item" data-bs-interval="2000">
                     <img src="{{$elem->imgsource}}" class="card-img-top card-img-catalog" alt="{{$elem->id}}">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 class="last-5-name">{{$elem->antagonist}}</h5>
+                        <h5 class="last-5-name">{{$elem->name}}</h5>
                     </div>
                 </div>
                 @endif
